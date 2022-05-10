@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { getMonsters } from './services/fetch-utils';
-import MonstersList from './MonstersList';
+import MonsterList from './MonsterList.js';
 
 function App() {
   const [monsters, setMonsters] = useState([]);
@@ -27,7 +27,7 @@ function App() {
           disabled={page <= 1} onClick={() => setPage(page - 1)}>Previous Page</button>
         <button onClick={() => setPage(page + 1)}>Next Page</button>
       </div>
-      <MonstersList monsters={monsters} />
+      <MonsterList monsters={monsters} />
     </>
   );
 }
