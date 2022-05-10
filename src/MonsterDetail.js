@@ -18,7 +18,7 @@ export default function MonsterDetail() {
     <>         
       <Link to='/'>Home</Link>
       <div className='monster-detail'>
-        <p>{monster.name}</p>
+        <p>{monster.Name}</p>
         <p>Size: {monster.size}</p>
         <p>{monster.RA}</p>
         <p>{monster.HP}</p>
