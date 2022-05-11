@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.monsters-list {
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.monster-object {
+  display: inline-block;
+  flex-grow: 1;
+  width: calc(100% * (1/4) - 20);
+  margin: 10px 10px 10px 4%;
+  filter: drop-shadow(5px 5px 15px black);
+}
