@@ -21,7 +21,7 @@ function App() {
   }, [page, orderBy]);
   return (
     <>
-      <h2>Current Page {page}</h2>
+      <h2>Current Page: {page}</h2>
       <select onClick={(e) => setOrderBy(e.target.value)} className='orderDropdown'>
         <option value='Name'>Name</option>
         <option value='Size'>Size</option>
@@ -33,7 +33,7 @@ function App() {
       <div className='buttons'>
         <button
           disabled={page <= 1} onClick={() => setPage(page - 1)}>Previous Page</button>
-        <button onClick={() => setPage(page + 1)}>Next Page</button>
+        <button disabled={page >= (monsters.length % 40)} onClick={() => setPage(page + 1)}>Next Page</button>
       </div>
       <MonsterList monsters={monsters} />
     </>
