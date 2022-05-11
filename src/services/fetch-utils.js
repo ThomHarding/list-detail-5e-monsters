@@ -1,10 +1,12 @@
 import { client, checkError } from './client';
 
-export async function getMonsters(from = 0, to = 20) {
+export async function getMonsters(from = 0, to = 20, orderBy) {
   const response = await client
     .from('Monsters')
     .select()
-    .range(from, to);
+    .range(from, to)
+    .order(orderBy);
+    //I had to relearn regex and spend an hour and a half cleaning data to make this line of code work
 
   return checkError(response);
 }

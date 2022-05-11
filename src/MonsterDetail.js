@@ -15,13 +15,13 @@ export default function MonsterDetail() {
   }, [params.id]);
 
   return (
-    <>         
+    <>
       <Link to='/'>Home</Link>
       <div className='monster-detail'>
         <p>{monster.Name}</p>
-        <p>Size: {monster.size}</p>
+        <p>Size: {monster.Size}</p>
         <p>{monster.RA}</p>
-        <p>{monster.HP}</p>
+        <p>HP: {monster.HP}</p>
         <p>Armor Class: {monster.AC}</p>
         <p>CR: {monster.CR}</p>
       </div>  
